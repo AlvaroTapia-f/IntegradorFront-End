@@ -7,6 +7,13 @@ import { handleDeleteProduct } from "../services/products";
 const modal = document.querySelector("#modalPopUp");
 export const openModal = () =>{
     modal.classList.add('mostrarPopUp');
+    const btnDelete = document.querySelector("#btnDelete");
+
+    if(activeProduct){
+        btnDelete.style.display = "block";
+    } else{
+        btnDelete.style.display = "none";
+    }
 
     if(activeProduct){
         const nombre = document.querySelector("#nameItem");
